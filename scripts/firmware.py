@@ -48,7 +48,7 @@ def installfirmware( node ):
   f.write("%s \n" % output)
 
   # run the firmware update
-  cmd =  "cd "+ firmware_dir +" ; ./"+ firmware +".*exe -s -f"
+  cmd =  "cd "+ firmware_dir +" ; ./"+ firmware +".*exe -s"
   f.write("%s \n" % cmd)
   output = os.popen(cmd).read()
   f.write("%s \n" % output)
